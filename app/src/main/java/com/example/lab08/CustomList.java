@@ -14,8 +14,20 @@ public class CustomList {
         cities.add(city);
     }
 
-    
-
-    // Will be implemented later using TDD (leave blank for now)
-    // public boolean hasCity(City city) { ... }
+    public List<City> getCities() {
+        List<City> list = cities;
+        Collections.sort(list, (c1, c2) -> c1.getCityName().compareTo(c2.getCityName()));
+        return list;
+    }
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+    public void deleteCity(City city) {
+        if (cities.contains(city)) {
+            cities.remove(city);
+        }
+    }
+    public int countCities() {
+        return cities.size();
+    }
 }
