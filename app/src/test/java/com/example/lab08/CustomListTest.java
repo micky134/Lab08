@@ -7,7 +7,7 @@ public class CustomListTest {
 
     private CustomList mockCityList() {
         CustomList cityList = new CustomList();
-        cityList.add(new City("Edmonton", "AB"));
+        cityList.addCity(new City("Edmonton", "AB"));
         return cityList;
     }
 
